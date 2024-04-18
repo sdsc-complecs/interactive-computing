@@ -303,7 +303,7 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
   * Jupyter Notebook
  
 ### Launching Jupyter Notebook <a id="exp-portal-jupnb"></a>
-```
+``` 
 Account: use300
 Partition: (Please choose the gpu, gpu-shared, or gpu-preempt as the partition if using gpus): debug
 Time limit (min): 30
