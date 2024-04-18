@@ -12,6 +12,7 @@ These exercises use sample code available from these two repositories:
   * [Launching Notebooks with Galyleo: GPU](#galy-notebk-gpu)
 * [Using X11 to Launch GUI on Expanse](#exp-x11)
 * [Using the Expanse Portal](#exp-portal)
+  * [Launching Jupyter Notebook](#exp-portal-jupnb)
 
 ## Using X11 to Launch GUI on Expanse] <a id="exp-x11"></a>
 * In this example, we'll use X11 Forwarding to Expanse Interactive Node to run Matlab
@@ -300,6 +301,27 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
 * Launch the main applications:
   * Matlab
   * Jupyter Notebook
-    
+ 
+### Launching Jupyter Notebook <a id="exp-portal-jupnb"></a>
+```
+Account: use300
+Partition: (Please choose the gpu, gpu-shared, or gpu-preempt as the partition if using gpus): debug
+Time limit (min): 30
+Number of cores: 1
+Memory required per node (GB): 2
+GPUs (optional): 0
+Singularity Image File Location: (Use your own or to include from existing container library at /cm/shared/apps/container e.g., /cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif)
+/cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif
+Environment modules to be loaded (E.g., to use latest version of system Anaconda3 include cpu,gcc,anaconda3):   singularitypro
+Conda Environment (Enter your own conda environment if any):
+Conda Init (Provide path to conda initialization scripts):
+Conda Yaml (Upload a yaml file to build the conda environment at runtime) No file chosen:
+Turn on use of mamba for speeding up conda-yml installs: 
+Enable use of new caching mechanism that will store and reuse conda-yml created environments using conda-pack !????
+Reservation: 
+QoS:
+Working directory:  HOME
+Type:  JupyterLab
+```
 
 [Back to Top](#top)
