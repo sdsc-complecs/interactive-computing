@@ -282,8 +282,11 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
 
 
 ### Launching Jupyter Notebook From the Portal <a id="exp-portal-jupnb"></a>
+* To configure a notebook job you need to fill out the Jupyter Session Form
+* Use the field values below
+  
 ``` 
-Account: use300
+Account: abc123
 Partition: (Please choose the gpu, gpu-shared, or gpu-preempt as the partition if using gpus): debug
 Time limit (min): 30
 Number of cores: 1
@@ -306,6 +309,7 @@ Type:  JupyterLab
 [Back to Top](#top)
 
 ## Using X11 to Launch GUI on Expanse] <a id="exp-x11"></a>
+
 ### 03/19/25: Note:  X11 does not work on Expanse at this time
 * In this example, we'll use X11 Forwarding to Expanse Interactive Node to run Matlab
 * Note: MacOS/Ventura has an X11 problem that is being debugged.
