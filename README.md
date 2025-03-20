@@ -10,41 +10,12 @@ These exercises use sample code available from these two repositories:
 * [Launching Notebooks with Galyleo](#galy-notebk)
   * [Launching Notebooks with Galyleo: CPU](#galy-notebk-cpu)
   * [Launching Notebooks with Galyleo: GPU](#galy-notebk-gpu)
-* [Using X11 to Launch GUI on Expanse](#exp-x11)
 * [Using the Expanse Portal](#exp-portal)
+  * [Getting Shell Access](#exp-portal-shell)
   * [Launching Jupyter Notebook](#exp-portal-jupnb)
+* [Using X11 to Launch GUI on Expanse](#exp-x11)
 
-## Using X11 to Launch GUI on Expanse] <a id="exp-x11"></a>
-* In this example, we'll use X11 Forwarding to Expanse Interactive Node to run Matlab
-* Note: MacOS/Ventura has an X11 problem that is being debugged.
-* You will launch 2 connections from your expanse login account
-  * Connection #1: request the interactive node
-  * Connection #2: connect to the interactive node using X11 ssh connection
 
-* Setup Connection #1 to an interactive node:
-  * Connect to Expanse from local computing using the "-Y" for X11 connection
-
-```
-[localhost ]$ ssh -Y mthomas@login.expanse.sdsc.edu
-[mthomas@login02 ~]$ srun --partition=debug  --pty --account=use300 --nodes=1 --ntasks-per-node=4  --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
-srun: job 29969059 queued and waiting for resources
-srun: job 29969059 has been allocated resources
-[mthomas@exp-9-55 ~]$ 
-```
-
-* Connection #2: connect to the interactive node with X11 flags on; set up module environment and launch app.
-  * Connect to Expanse from local computing using the "-Y" for X11 connection
-  * Then connect to the interactive node
-```
-[localhost ]$ ssh -Y mthomas@login.expanse.sdsc.edu
-[mthomas@login01 ~] ssh -Y exp-9-55
-Last login: Wed Dec  6 19:21:56 2023 from 10.21.0.19
-[mthomas@exp-9-55 ~]$ module load  gpu/0.17.3b
-[mthomas@exp-9-55 ~]$ module load matlab/2022b/nmbr5dd
-[mthomas@exp-9-55 ~]$ matlab
-```
-  
-[Back to Top](#top)
 
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
@@ -298,11 +269,19 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
 ## Using the Expanse Portal <a id="exp-portal"></a>
 * Log onto the Expanse portal:  https://portal.expanse.sdsc.edu
 * Practice navigating your folders and directories
+* Build a job
 * Launch the main applications:
   * Matlab
   * Jupyter Notebook
- 
-### Launching Jupyter Notebook <a id="exp-portal-jupnb"></a>
+* For more details, see the Expanse user guide (available on the portal)
+
+### Getting shell access to Expanse <a id="exp-portal-shell></a>
+* You can get shell access to Expanse by choosing _Clusters > Expanse Shell Access_ from the top menu in the Expanse Portal Dashboard.
+* You will be logged in to one of Expanse's login nodes, exactly as if you were using SSH to connect.
+* You would need to load the necessary environment and software modules to use the system as outlined in the Expanse User Guide.
+
+
+### Launching Jupyter Notebook From the Portal <a id="exp-portal-jupnb"></a>
 ``` 
 Account: use300
 Partition: (Please choose the gpu, gpu-shared, or gpu-preempt as the partition if using gpus): debug
@@ -324,4 +303,37 @@ Working directory:  HOME
 Type:  JupyterLab
 ```
 
+[Back to Top](#top)
+
+## Using X11 to Launch GUI on Expanse] <a id="exp-x11"></a>
+### 03/19/25: Note:  X11 does not work on Expanse at this time
+* In this example, we'll use X11 Forwarding to Expanse Interactive Node to run Matlab
+* Note: MacOS/Ventura has an X11 problem that is being debugged.
+* You will launch 2 connections from your expanse login account
+  * Connection #1: request the interactive node
+  * Connection #2: connect to the interactive node using X11 ssh connection
+
+* Setup Connection #1 to an interactive node:
+  * Connect to Expanse from local computing using the "-Y" for X11 connection
+
+```
+[localhost ]$ ssh -Y mthomas@login.expanse.sdsc.edu
+[mthomas@login02 ~]$ srun --partition=debug  --pty --account=use300 --nodes=1 --ntasks-per-node=4  --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
+srun: job 29969059 queued and waiting for resources
+srun: job 29969059 has been allocated resources
+[mthomas@exp-9-55 ~]$ 
+```
+
+* Connection #2: connect to the interactive node with X11 flags on; set up module environment and launch app.
+  * Connect to Expanse from local computing using the "-Y" for X11 connection
+  * Then connect to the interactive node
+```
+[localhost ]$ ssh -Y mthomas@login.expanse.sdsc.edu
+[mthomas@login01 ~] ssh -Y exp-9-55
+Last login: Wed Dec  6 19:21:56 2023 from 10.21.0.19
+[mthomas@exp-9-55 ~]$ module load  gpu/0.17.3b
+[mthomas@exp-9-55 ~]$ module load matlab/2022b/nmbr5dd
+[mthomas@exp-9-55 ~]$ matlab
+```
+  
 [Back to Top](#top)
