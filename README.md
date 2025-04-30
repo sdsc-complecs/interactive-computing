@@ -94,7 +94,9 @@ NUMA node4 CPU(s):   64-79
 NUMA node5 CPU(s):   80-95
 NUMA node6 CPU(s):   96-111
 NUMA node7 CPU(s):   112-127
-Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd amd_ppin arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sme sev sev_es
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma 
+[]
+vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sme sev sev_es
 
 ```
 
@@ -277,8 +279,11 @@ export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
 ```
 export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
 [username@login01 ~]$ which galyleo
-[username@login01 ~]$ galyleo launch --account use300 --partition gpu-debug --cpus 1 --memory 93 --gpus 1 --time-limit 00:5:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif --bind /expanse,/scratch --nv 
-[snip]
+[username@login01 ~]$ /cm/shared/apps/sdsc/galyleo/galyleo
+[username@login01 ~]$ galyleo launch --account <<project>> --partition gpu-shared --cpus 1 --memory 93 --gpus 1 --time-limit 01:30:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/tensorflow/tensorflow-latest.sif --bind /expanse,/scratch --nv
+Preparing galyleo for launch into Jupyter orbit ...
+Listing all launch parameters ...
+[SNIP]
 Submitted Jupyter launch script to Slurm. Your SLURM_JOB_ID is 9773912
 [snip]
 Your Jupyter notebook session will begin once compute resources are allocated to your job by the scheduler.
