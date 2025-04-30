@@ -19,6 +19,8 @@ These exercises use sample code available from these two repositories:
 
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
+
+### Clone the HPC Training Examples repo:
 * It is assumed you have `cloned` the HPC training examples repo: https://github.com/sdsc-hpc-training-org/hpctr-examples
 
 ### Accessing Interactive Compute Nodes on Expanse: CPU <a id="int-nodes-cpu"></a>
