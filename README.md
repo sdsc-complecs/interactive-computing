@@ -5,6 +5,7 @@ These exercises use sample code available from these two repositories:
 
 ## [Table of Contents](#top)
 * [Accessing Interactive Compute Nodes on Expanse](#int-nodes)
+  * [Clone HPC Training Examples Repo](#clone-repo)
   * [Accessing Interactive Compute Nodes on Expanse: CPU](#int-nodes-cpu)
   * [Accessing Interactive Compute Nodes on Expanse: GPU](#int-nodes-cpu)
 * [Launching Notebooks with Galyleo](#galy-notebk)
@@ -20,8 +21,34 @@ These exercises use sample code available from these two repositories:
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
 
-### Clone the HPC Training Examples repo:
+### Clone the HPC Training Examples repo <a id="clone-repo"></a>
 * It is assumed you have `cloned` the HPC training examples repo: https://github.com/sdsc-hpc-training-org/hpctr-examples
+```
+[etrain76@login02]$ git clone https://github.com/sdsc-hpc-training-org/hpctr-examples.git
+Cloning into 'hpctr-examples'...
+remote: Enumerating objects: 506, done.
+remote: Counting objects: 100% (506/506), done.
+remote: Compressing objects: 100% (336/336), done.
+remote: Total 506 (delta 224), reused 433 (delta 161), pack-reused 0 (from 0)
+Receiving objects: 100% (506/506), 27.65 MiB | 28.23 MiB/s, done.
+Resolving deltas: 100% (224/224), done.
+Updating files: 100% (307/307), done.
+[etrain76@login02]$ ll
+total 18
+drwxr-xr-x 14 etrain76 gue998 18 Apr 29 22:27 hpctr-examples
+[etrain76@login02 CLONE-TEST]$ ll hpctr-examples/
+total 152
+drwxr-xr-x 9 etrain76 gue998    10 Apr 29 22:26 basic_par
+drwxr-xr-x 2 etrain76 gue998     6 Apr 29 22:26 calc-pi
+drwxr-xr-x 2 etrain76 gue998     5 Apr 29 22:26 calc-prime
+drwxr-xr-x 6 etrain76 gue998     7 Apr 29 22:26 cuda
+[SNIP]
+drwxr-xr-x 2 etrain76 gue998    23 Apr 29 22:27 mpi
+drwxr-xr-x 2 etrain76 gue998     3 Apr 29 22:27 netcdf
+drwxr-xr-x 2 etrain76 gue998    17 Apr 29 22:27 openacc
+drwxr-xr-x 2 etrain76 gue998     8 Apr 29 22:27 openmp
+-rw-r--r-- 1 etrain76 gue998  5772 Apr 29 22:26 README.md
+```
 
 ### Accessing Interactive Compute Nodes on Expanse: CPU <a id="int-nodes-cpu"></a>
 * access CPU node
