@@ -5,8 +5,8 @@ These exercises use sample code available from these two repositories:
 
 ## [Table of Contents](#top)
 * [Accessing Interactive Compute Nodes on Expanse](#int-nodes)
-  * [Clone HPC Training Examples Repos](#clone-repo)
-  * [Accessing Interactive Compute Nodes on Expanse: CPU](#int-nodes-cpu)
+  * Exercise 0: [Clone HPC Training Examples Repos](#clone-repo)
+  * Exercise 1: [Accessing Interactive Compute Nodes on Expanse: CPU](#int-nodes-cpu)
   * [Accessing Interactive Compute Nodes on Expanse: GPU](#int-nodes-cpu)
 * [Launching Notebooks with Galyleo](#galy-notebk)
   * [Launching Notebooks with Galyleo: CPU](#galy-notebk-cpu)
@@ -21,7 +21,7 @@ These exercises use sample code available from these two repositories:
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
 
-### Clone the Interactive Computing repo:
+### Exercise 0: Clone the Interactive Computing repo:
   
 ```
 [etrain76@login01 wrkshp-prep]$ git clone https://github.com/sdsc-complecs/interactive-computing.git
@@ -65,7 +65,8 @@ drwxr-xr-x 2 etrain76 gue998     8 Apr 29 22:27 openmp
 -rw-r--r-- 1 etrain76 gue998  5772 Apr 29 22:26 README.md
 ```
 
-### Accessing Interactive Compute Nodes on Expanse: CPU <a id="int-nodes-cpu"></a>
+### Exercise 2 : Accessing Interactive HPC CPU Node
+Accessing Interactive Compute Nodes on Expanse: CPU <a id="int-nodes-cpu"></a>
 * access CPU node
   
 ```
