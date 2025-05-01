@@ -5,7 +5,7 @@ These exercises use sample code available from these two repositories:
 
 ## [Table of Contents](#top)
 * [Accessing Interactive Compute Nodes on Expanse](#int-nodes)
-  * [Clone HPC Training Examples Repso](#clone-repo)
+  * [Clone HPC Training Examples Repos](#clone-repo)
   * [Accessing Interactive Compute Nodes on Expanse: CPU](#int-nodes-cpu)
   * [Accessing Interactive Compute Nodes on Expanse: GPU](#int-nodes-cpu)
 * [Launching Notebooks with Galyleo](#galy-notebk)
