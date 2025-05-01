@@ -8,20 +8,19 @@ These exercises use sample code available from these two repositories:
   * Exercise 0: [Clone HPC Training Examples Repos](#clone-repo)
   * Exercise 1: [Accessing Interactive Compute Nodes on Expanse: CPU](#int-nodes-cpu)
   * [Accessing Interactive Compute Nodes on Expanse: GPU](#int-nodes-cpu)
-* [Launching Notebooks with Galyleo](#galy-notebk)
+* [Exercise 2:  Using X11 to Launch GUI on Expanse](#x11-forward)
+* [Exercise 3: Launching Notebooks with Galyleo](#galy-notebk)
   * [Launching Notebooks with Galyleo: CPU](#galy-notebk-cpu)
   * [Launching Notebooks with Galyleo: GPU](#galy-notebk-gpu)
-* [Using the Expanse Portal](#exp-portal)
+* [Exercise 4: Using the Expanse Portal](#exp-portal)
   * [Getting Shell Access](#exp-portal-shell)
   * [Launching Jupyter Notebook](#exp-portal-jupnb)
-* [Using X11 to Launch GUI on Expanse](#exp-x11)
-
 
 
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
 
-### Exercise 0: Clone the Interactive Computing repo:
+### Exercise 0: Clone the Interactive Computing repo: <a id="clone-repo"></a>
   
 ```
 [etrain76@login01 wrkshp-prep]$ git clone https://github.com/sdsc-complecs/interactive-computing.git
@@ -65,8 +64,8 @@ drwxr-xr-x 2 etrain76 gue998     8 Apr 29 22:27 openmp
 -rw-r--r-- 1 etrain76 gue998  5772 Apr 29 22:26 README.md
 ```
 
-### Exercise 2 : Accessing Interactive HPC CPU Node
-Accessing Interactive Compute Nodes on Expanse: CPU <a id="int-nodes-cpu"></a>
+### Exercise 1: Accessing Interactive HPC CPU Node <a id="int-nodes-cpu"></a>
+Accessing Interactive Compute Nodes on Expanse: CPU 
 * access CPU node
   
 ```
@@ -277,89 +276,7 @@ Hello,  SDSC HPC Training World!
 ```
 [Back to Top](#top)
 
-## [Launching Notebooks with Galyleo] <a id="galy-notebk"></a>
-Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utility:  https://github.com/mkandes/galyleo 
-
-### Launching Notebooks with Galyleo: CPU <a id="galy-notebk-cpu"></a>
-
-```
-export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
-[username@login01 ~]$ which galyleo
-```
-
-[Back to Top](#top)
-
-### Launching Notebooks with Galyleo: GPU <a id="galy-notebk-gpu"></a>
-* Follow examples on the slide titled _Launching GPU notebooks using galyleo_
-* Run the Hello World example in the notebooks folder.
-```
-export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
-[username@login01 ~]$ which galyleo
-[username@login01 ~]$ /cm/shared/apps/sdsc/galyleo/galyleo
-[username@login01 ~]$ galyleo launch --account <<project>> --partition gpu-shared --cpus 1 --memory 93 --gpus 1 --time-limit 01:30:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/tensorflow/tensorflow-latest.sif --bind /expanse,/scratch --nv
-Preparing galyleo for launch into Jupyter orbit ...
-Listing all launch parameters ...
-[SNIP]
-Submitted Jupyter launch script to Slurm. Your SLURM_JOB_ID is 9773912
-[snip]
-Your Jupyter notebook session will begin once compute resources are allocated to your job by the scheduler.
-https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab82dd51b4524c267d2fd
-[username@login01 ~]$ squeue -u username
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-           9773912 gpu-debug galyleo-  username PD       0:00      1 (None) 
-[username@login01 ~]$ squeue -u username
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-           9773912 gpu-debug galyleo-  username  R       0:20      1 exp-7-59 
-```
-* Monitor URL until notebook launches. You can then run the Hello World example:
-```
-/notebook-examples/Hello_World/
-
-```
-
-## Using the Expanse Portal <a id="exp-portal"></a>
-* Log onto the Expanse portal:  https://portal.expanse.sdsc.edu
-* Practice navigating your folders and directories
-* Build a job
-* Launch the main applications:
-  * Matlab
-  * Jupyter Notebook
-* For more details, see the Expanse user guide (available on the portal)
-
-### Getting shell access to Expanse <a id="exp-portal-shell></a>
-* You can get shell access to Expanse by choosing _Clusters > Expanse Shell Access_ from the top menu in the Expanse Portal Dashboard.
-* You will be logged in to one of Expanse's login nodes, exactly as if you were using SSH to connect.
-* You would need to load the necessary environment and software modules to use the system as outlined in the Expanse User Guide.
-
-
-### Launching Jupyter Notebook From the Portal <a id="exp-portal-jupnb"></a>
-* To configure a notebook job you need to fill out the Jupyter Session Form
-* Use the field values below
-  
-``` 
-Account: abc123
-Partition: (Please choose the gpu, gpu-shared, or gpu-preempt as the partition if using gpus): debug
-Time limit (min): 30
-Number of cores: 1
-Memory required per node (GB): 2
-GPUs (optional): 0
-Singularity Image File Location: (Use your own or to include from existing container library at /cm/shared/apps/container e.g., /cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif)
-/cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif
-Environment modules to be loaded (E.g., to use latest version of system Anaconda3 include cpu,gcc,anaconda3):   singularitypro
-Conda Environment (Enter your own conda environment if any):
-Conda Init (Provide path to conda initialization scripts):
-Conda Yaml (Upload a yaml file to build the conda environment at runtime) No file chosen:
-Turn on use of mamba for speeding up conda-yml installs: 
-Enable use of new caching mechanism that will store and reuse conda-yml created environments using conda-pack !????
-Reservation: 
-QoS:
-Working directory:  HOME
-Type:  JupyterLab
-```
-
-[Back to Top](#top)
-
-## Using X11 to Launch GUI on Expanse] <a id="exp-x11"></a>
+## Exercise 2: Using X11 to Launch GUI on Expanse] <a id="x11-forward"></a>
 
 ### 03/19/25: Note:  X11 does not work on Expanse at this time
 * In this example, we'll use X11 Forwarding to Expanse Interactive Node to run Matlab
@@ -404,3 +321,87 @@ data management and interactive computing. COMPLECS is supported by
 NSF award 2320934.
 
 <img src="./images/NSF_Official_logo_Med_Res_600ppi.png" alt="drawing" width="150"/>
+
+
+## [Exercise 3: Launching Notebooks with Galyleo] <a id="galy-notebk"></a>
+Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utility:  https://github.com/mkandes/galyleo 
+
+### Launching Notebooks with Galyleo: CPU <a id="galy-notebk-cpu"></a>
+
+```
+export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
+[username@login01 ~]$ which galyleo
+```
+
+[Back to Top](#top)
+
+### Launching Notebooks with Galyleo: GPU <a id="galy-notebk-gpu"></a>
+* Follow examples on the slide titled _Launching GPU notebooks using galyleo_
+* Run the Hello World example in the notebooks folder.
+```
+export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
+[username@login01 ~]$ which galyleo
+[username@login01 ~]$ /cm/shared/apps/sdsc/galyleo/galyleo
+[username@login01 ~]$ galyleo launch --account <<project>> --partition gpu-shared --cpus 1 --memory 93 --gpus 1 --time-limit 01:30:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/tensorflow/tensorflow-latest.sif --bind /expanse,/scratch --nv
+Preparing galyleo for launch into Jupyter orbit ...
+Listing all launch parameters ...
+[SNIP]
+Submitted Jupyter launch script to Slurm. Your SLURM_JOB_ID is 9773912
+[snip]
+Your Jupyter notebook session will begin once compute resources are allocated to your job by the scheduler.
+https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab82dd51b4524c267d2fd
+[username@login01 ~]$ squeue -u username
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
+           9773912 gpu-debug galyleo-  username PD       0:00      1 (None) 
+[username@login01 ~]$ squeue -u username
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
+           9773912 gpu-debug galyleo-  username  R       0:20      1 exp-7-59 
+```
+* Monitor URL until notebook launches. You can then run the Hello World example:
+```
+/notebook-examples/Hello_World/
+
+```
+
+## Exercise 4: Using the Expanse Portal <a id="exp-portal"></a>
+* Log onto the Expanse portal:  https://portal.expanse.sdsc.edu
+* Practice navigating your folders and directories
+* Build a job
+* Launch the main applications:
+  * Matlab
+  * Jupyter Notebook
+* For more details, see the Expanse user guide (available on the portal)
+
+### Getting shell access to Expanse <a id="exp-portal-shell></a>
+* You can get shell access to Expanse by choosing _Clusters > Expanse Shell Access_ from the top menu in the Expanse Portal Dashboard.
+* You will be logged in to one of Expanse's login nodes, exactly as if you were using SSH to connect.
+* You would need to load the necessary environment and software modules to use the system as outlined in the Expanse User Guide.
+
+
+### Launching Jupyter Notebook From the Portal <a id="exp-portal-jupnb"></a>
+* To configure a notebook job you need to fill out the Jupyter Session Form
+* Use the field values below
+  
+``` 
+Account: abc123
+Partition: (Please choose the gpu, gpu-shared, or gpu-preempt as the partition if using gpus): debug
+Time limit (min): 30
+Number of cores: 1
+Memory required per node (GB): 2
+GPUs (optional): 0
+Singularity Image File Location: (Use your own or to include from existing container library at /cm/shared/apps/container e.g., /cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif)
+/cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif
+Environment modules to be loaded (E.g., to use latest version of system Anaconda3 include cpu,gcc,anaconda3):   singularitypro
+Conda Environment (Enter your own conda environment if any):
+Conda Init (Provide path to conda initialization scripts):
+Conda Yaml (Upload a yaml file to build the conda environment at runtime) No file chosen:
+Turn on use of mamba for speeding up conda-yml installs: 
+Enable use of new caching mechanism that will store and reuse conda-yml created environments using conda-pack !????
+Reservation: 
+QoS:
+Working directory:  HOME
+Type:  JupyterLab
+```
+
+[Back to Top](#top)
+
