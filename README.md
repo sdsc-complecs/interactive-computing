@@ -5,7 +5,7 @@ These exercises use sample code available from these two repositories:
 
 ## [Table of Contents](#top)
 * [Accessing Interactive Compute Nodes on Expanse](#int-nodes)
-  * [Clone HPC Training Examples Repo](#clone-repo)
+  * [Clone HPC Training Examples Repso](#clone-repo)
   * [Accessing Interactive Compute Nodes on Expanse: CPU](#int-nodes-cpu)
   * [Accessing Interactive Compute Nodes on Expanse: GPU](#int-nodes-cpu)
 * [Launching Notebooks with Galyleo](#galy-notebk)
@@ -21,8 +21,23 @@ These exercises use sample code available from these two repositories:
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
 
-### Clone the HPC Training Examples repo <a id="clone-repo"></a>
-* It is assumed you have `cloned` the HPC training examples repo: https://github.com/sdsc-hpc-training-org/hpctr-examples
+### Clone the interactive computing repo:
+  
+```
+[etrain76@login01 wrkshp-prep]$ git clone https://github.com/sdsc-complecs/interactive-computing.git
+Cloning into 'interactive-computing'...
+remote: Enumerating objects: 38, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 38 (delta 9), reused 5 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (38/38), 148.07 KiB | 1.78 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+```
+
+### Clone the Training Examples repo 
+
+* Clone the HPC training examples repo: https://github.com/sdsc-hpc-training-org/hpctr-examples
+
 ```
 [etrain76@login02]$ git clone https://github.com/sdsc-hpc-training-org/hpctr-examples.git
 Cloning into 'hpctr-examples'...
