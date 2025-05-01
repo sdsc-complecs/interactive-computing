@@ -21,7 +21,7 @@ These exercises use sample code available from these two repositories:
 ## Accessing Interactive Compute Nodes on Expanse <a id="int-nodes"></a>
 * In this exercise, you will learn to launch interactive sessions on a compute node from the command line.
 
-### Clone the interactive computing repo:
+### Clone the Interactive Computing repo:
   
 ```
 [etrain76@login01 wrkshp-prep]$ git clone https://github.com/sdsc-complecs/interactive-computing.git
