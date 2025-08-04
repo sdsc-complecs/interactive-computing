@@ -344,11 +344,10 @@ export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
 [username@login01 ~]$ which galyleo
 ```
 
-[Back to Top](#top)
-
 ### Launching Notebooks with Galyleo: GPU <a id="galy-notebk-gpu"></a>
 * Follow examples on the slide titled _Launching GPU notebooks using galyleo_
 * Run the Hello World example in the notebooks folder.
+  
 ```
 export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
 [username@login01 ~]$ which galyleo
@@ -368,10 +367,11 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
            9773912 gpu-debug galyleo-  username  R       0:20      1 exp-7-59 
 ```
+
 * Monitor URL until notebook launches. You can then run the Hello World example:
+
 ```
 /notebook-examples/Hello_World/
-
 ```
 
 ## Exercise 4: Using the Expanse Portal <a id="exp-portal"></a>
