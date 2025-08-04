@@ -81,10 +81,7 @@ Accessing Interactive Compute Nodes on Expanse: CPU
 * access CPU node
   
 ```
-[mthomas@login02 ~]$ srun --partition=debug  --pty --account=<<project>> --nodes=1 --ntasks-per-node=4 \
-    --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
-> ^C
-[mthomas@login02 ~]$ srun --partition=debug  --pty --account=use300 --nodes=1 --ntasks-per-node=4     --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
+[mthomas@login02 ~]$ srun --partition=debug  --pty --account=<<project>> --nodes=1 --ntasks-per-node=4 --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
 srun: job 29968362 queued and waiting for resources
 . . .
 srun: job 29968362 has been allocated resources
