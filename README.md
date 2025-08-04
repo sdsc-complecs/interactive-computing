@@ -310,18 +310,6 @@ Last login: Wed Dec  6 19:21:56 2023 from 10.21.0.19
   
 [Back to Top](#top)
 
-## About COMPLECS
-
-COMPLECS (COMPrehensive Learning for end-users to Effectively utilize
-CyberinfraStructure) is a new SDSC program where training will cover
-non-programming skills needed to effectively use
-supercomputers. Topics include parallel computing concepts, Linux
-tools and bash scripting, security, batch computing, how to get help,
-data management and interactive computing. COMPLECS is supported by
-NSF award 2320934.
-
-<img src="./images/NSF_Official_logo_Med_Res_600ppi.png" alt="drawing" width="150"/>
-
 
 ## [Exercise 3: Launching Notebooks with Galyleo] <a id="galy-notebk"></a>
 Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utility:  https://github.com/mkandes/galyleo 
