@@ -85,6 +85,7 @@ srun --partition=debug  --pty --account=<<project>> --nodes=1 --ntasks-per-node=
 ```
 * output:
 ```
+[mthomas@exp-9-56 ~]$ srun --partition=debug  --pty --account=<<project>> --nodes=1 --ntasks-per-node=4 --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
 srun: job 29968362 queued and waiting for resources
 . . .
 srun: job 29968362 has been allocated resources
@@ -217,10 +218,13 @@ PRIME_MPI - Master process:
 
 ### Accessing Interactive Compute Nodes on Expanse: GPU <a id="int-nodes-Gpu"></a>
 * The following example  requests a GPU node, 10 cores, 1 GPU and 96G  in the debug partition for 30 minutes.
+```
+srun --partition=gpu-debug --pty --account=gue998 --ntasks-per-node=10 --nodes=1 --mem=96G --gpus=1 -t 00:30:00 --wait=0 --export=ALL /bin/bash
+```
 * To ensure the GPU environment is properly loaded, please be sure run both the module purge and module restore commands.
 
 ```
-[mthomas@login02 ~]$ srun --partition=gpu-debug --pty --account=use300 --ntasks-per-node=10 --nodes=1 --mem=96G --gpus=1 -t 00:30:00 --wait=0 --export=ALL /bin/bash
+[mthomas@login02 ~]$ srun --partition=gpu-debug --pty --account=gue998 --ntasks-per-node=10 --nodes=1 --mem=96G --gpus=1 -t 00:30:00 --wait=0 --export=ALL /bin/bash
 srun: job 29968716 queued and waiting for resources
 srun: job 29968716 has been allocated resources
 [mthomas@exp-7-59 ~]$ hostname
