@@ -164,19 +164,24 @@ To pass value to script:
 
 NOTE: for other compilers, replace "gcc"
 with the one you want to use.
+```
  
 [3] Run using an interactive node:
 Method [3a]
 Request the interactive node using the "srun" command:
 
+```
 srun --partition=debug  --pty --account=use300 --nodes=1 --ntasks-per-node=24  --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
+```
 
 Run the code using mpirun:
 
+```
 mpirun -n 64 ./mpi_prime 5000000
 ```
+
 * Run the calculation using option [3a]
-* 
+  
 ```
 [mthomas@exp-9-55 calc-prime]$ which mpirun
 /cm/shared/apps/spack/0.17.3/cpu/b/opt/spack/linux-rocky8-zen2/gcc-10.2.0/openmpi-4.1.1-ygduf2ryo2scwdtpl4wftbmlz2xubbrv/bin/mpirun
@@ -212,7 +217,6 @@ PRIME_MPI - Master process:
   Normal end of execution.
 
 17 April 2024 09:02:35 PM
-
 
 ```
 
