@@ -124,8 +124,8 @@ vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmloa
 
 ```
 
-* Next, try to compile and run the mpi-prim code on the interactive node
-* once you have the node, cd to the mpi-prime directory:
+* Compile and run the mpi-prime code on the interactive node
+* Once you have the node, cd to the mpi-prime directory:
 
 ```
 [mthomas@exp-9-55 ~]$ cd /home/mthomas/hpctr-examples/calc-prime
