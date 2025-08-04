@@ -78,10 +78,10 @@ drwxr-xr-x 2 etrain76 gue998     8 Apr 29 22:27 openmp
 
 ### Exercise 1: Accessing Interactive HPC CPU Node <a id="int-nodes-cpu"></a>
 Accessing Interactive Compute Nodes on Expanse: CPU 
-* access CPU node
+* command to access CPU node
   
 ```
-[mthomas@login02 ~]$ srun --partition=debug  --pty --account=<<project>> --nodes=1 --ntasks-per-node=4 --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
+srun --partition=debug  --pty --account=<<project>> --nodes=1 --ntasks-per-node=4 --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
 ```
 * output:
 ```
@@ -166,10 +166,11 @@ with the one you want to use.
 [3] Run using an interactive node:
 Method [3a]
 Request the interactive node using the "srun" command:
-
+```
 srun --partition=debug  --pty --account=use300 --nodes=1 --ntasks-per-node=24  --mem=8G -t 00:30:00 --wait=0 --export=ALL /bin/bash
-
+```
 Run the code using mpirun:
+```
 mpirun -n 64 ./mpi_prime 5000000
 ```
 * Run the calculation using option [3a]
