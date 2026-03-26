@@ -299,7 +299,7 @@ Hello,  SDSC HPC Training World!
 ```
 [Back to Top](#top)
 
-## Exercise 2: Using X11 to Launch GUI on Expanse] <a id="x11-forward"></a>
+## Exercise 2: Using X11 to Launch GUI on Expanse <a id="x11-forward"></a>
 
 ### 03/19/25: Note:  X11 does not work on Expanse at this time
 * In this example, we'll use X11 Forwarding to Expanse Interactive Node to run Matlab
@@ -334,7 +334,7 @@ Last login: Wed Dec  6 19:21:56 2023 from 10.21.0.19
 [Back to Top](#top)
 
 
-## [Exercise 3: Launching Notebooks with Galyleo] <a id="galy-notebk"></a>
+## Exercise 3: Launching Notebooks with Galyleo <a id="galy-notebk"></a>
 Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utility:  https://github.com/mkandes/galyleo 
 
 ### Launching Notebooks with Galyleo: CPU <a id="galy-notebk-cpu"></a>
@@ -343,6 +343,7 @@ Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utilit
 export PATH="/cm/shared/apps/sdsc/galyleo:${PATH}"
 [username@login01 ~]$ which galyleo
 ```
+
 
 ### Launching Notebooks with Galyleo: GPU <a id="galy-notebk-gpu"></a>
 * Follow examples on the slide titled _Launching GPU notebooks using galyleo_
@@ -373,6 +374,7 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
 ```
 /notebook-examples/Hello_World/
 ```
+[Back to Top](#top)
 
 ## Exercise 4: Using the Expanse Portal <a id="exp-portal"></a>
 * Log onto the Expanse portal:  https://portal.expanse.sdsc.edu
