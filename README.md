@@ -386,7 +386,7 @@ https://grief-fantastic-given.expanse-user-content.sdsc.edu?token=5097acb6f32ab8
   * Jupyter Notebook
 * For more details, see the Expanse user guide (available on the portal)
 
-### Getting shell access to Expanse <a id="exp-portal-shell></a>
+### Getting shell access to Expanse <a id="exp-portal-shell"></a>
 * You can get shell access to Expanse by choosing _Clusters > Expanse Shell Access_ from the top menu in the Expanse Portal Dashboard.
 * You will be logged in to one of Expanse's login nodes, exactly as if you were using SSH to connect.
 * You would need to load the necessary environment and software modules to use the system as outlined in the Expanse User Guide.
