@@ -336,7 +336,7 @@ Last login: Wed Dec  6 19:21:56 2023 from 10.21.0.19
 
 
 ## Exercise 3: Launching Notebooks with Galyleo <a id="galy-notebk"></a>
-Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utility:  https://github.com/mkandes/galyleo 
+Launch Jupyter notebooks on Expanse CPUs and GPUs using the Galyleo shell utility:  https://github.com/sdsc/galyleo 
 
 ### Launching Notebooks with Galyleo: CPU <a id="galy-notebk-cpu"></a>
 
