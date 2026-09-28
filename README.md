@@ -13,7 +13,8 @@ NSF award 2320934.
 # COMPLECS Interactive Computing Exercises
 
 These exercises use sample code available from these two repositories:
-* 
+* https://github.com/sdsc-hpc-training-org/hpctr-examples
+* https://github.com/sdsc-hpc-training-org/Expanse-Notebooks
 
 ## [Table of Contents](#top)
 * [Accessing Interactive Compute Nodes on Expanse](#int-nodes)
